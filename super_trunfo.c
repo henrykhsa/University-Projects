@@ -10,6 +10,8 @@ struct Carta {
     float area;
     float pib;
     int pontosTuristicos;
+    float densidadePopulacional;
+    float PIBperCapita;
 };
 
 void lerCarta(struct Carta *carta, int numeroCarta) {
@@ -40,15 +42,25 @@ void exibirCarta(struct Carta carta, int numeroCarta) {
     printf("Área: %.2f km²\n", carta.area);
     printf("PIB: %.2f bilhões de reais\n", carta.pib);
     printf("Número de Pontos Turísticos: %d\n\n", carta.pontosTuristicos);
+    printf("Densidade Populacional: %.2f por km²\n", carta.densidadePopulacional);
+    printf("PIB per Capita: %.2f bilhões de reais\n", carta.PIBperCapita);
+    printf("\n");
 }
 
+void calcularDensidade(struct Carta *carta) {
+    carta->densidadePopulacional = (float)carta->populacao / carta->area;
+    carta->PIBperCapita = carta->pib / carta->populacao;
+
+}
 int main() {
     struct Carta carta1, carta2;
 
     // Ler os dados das cartas
     lerCarta(&carta1, 1);
+    calcularDensidade(&carta1);
     lerCarta(&carta2, 2);
-
+    calcularDensidade(&carta2);
+    
     // Exibir as cartas
     printf("Cartas cadastradas:\n");
     exibirCarta(carta1, 1);
