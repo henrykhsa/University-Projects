@@ -1,7 +1,6 @@
-//tentei limpar um pouco o código e tirei informações desnecessárias, tentei simplificar ao máximo tudo.
-
 #include <stdio.h>
 
+//Definindo as propriedades das cartas
 struct Carta {
     char estado;
     char codigo[5];  
@@ -12,8 +11,10 @@ struct Carta {
     int pontosTuristicos;
     float densidadePopulacional;
     float PIBperCapita;
+    float superpoder;
 };
 
+//Função que lê as informações inseridas das cartas
 void lerCarta(struct Carta *carta, int numeroCarta) {
     printf("Insira os dados da carta %d:\n", numeroCarta);
     printf("Estado (letra de A a H): ");
@@ -33,6 +34,7 @@ void lerCarta(struct Carta *carta, int numeroCarta) {
     printf("\n");
 }
 
+//Função que exibe as informações das cartas
 void exibirCarta(struct Carta carta, int numeroCarta) {
     printf("Carta %d:\n", numeroCarta);
     printf("Estado: %c\n", carta.estado);
@@ -47,25 +49,45 @@ void exibirCarta(struct Carta carta, int numeroCarta) {
     printf("\n");
 }
 
+//Função que calcula a densidade das cartas
 void calcularDensidade(struct Carta *carta) {
     carta->densidadePopulacional = (float)carta->populacao / carta->area;
-    carta->PIBperCapita = carta->pib / carta->populacao;
-
 }
-int main() {
-    struct Carta carta1, carta2;
 
-    // Ler os dados das cartas
+//Função que calcula o PIB per capita das cartas
+void calcularPIBperCapita(struct Carta *carta) {
+    carta->PIBperCapita = carta->pib / carta->populacao;
+}
+
+//Função que calcula o superpoder das cartas
+void calcularsuper (struct Carta *carta) {
+    carta->superpoder = carta->populacao + carta->pontosTuristicos + carta->area + carta->pib + carta->densidadePopulacional + carta->PIBperCapita;
+}
+
+//Função principal
+int main() {
+    struct Carta carta1, carta2, vencedor;
+
+    // Chama a função para ler os dados
     lerCarta(&carta1, 1);
-    calcularDensidade(&carta1);
     lerCarta(&carta2, 2);
+
+    // Chama a função para calcular a densidade populacional
+    calcularDensidade(&carta1);
     calcularDensidade(&carta2);
+
+    // Chama a função para calcular o PIB
+    calcularPIBperCapita(&carta1);
+    calcularPIBperCapita(&carta2);
     
-    // Exibir as cartas
+    // Chama a função para calcular o superpoder
+    calcularsuper(&carta1);
+    calcularsuper(&carta2);
+    
+    // Imprime o texto e chama a função para exibir as informações
     printf("Cartas cadastradas:\n");
     exibirCarta(carta1, 1);
     exibirCarta(carta2, 2);
 
     return 0;
 }
-// o programa voltou a funcionar, proximo passo talvez seria adicionar verificação de informações inseridas.
