@@ -22,6 +22,7 @@ void lerCarta(struct Carta *carta, int numeroCarta) {
     printf("Código da Carta (ex: A01): ");
     scanf("%s", carta->codigo);
     printf("Nome da Cidade: ");
+    getchar();
     fgets(carta->cidade, sizeof(carta->cidade), stdin);
     carta->cidade[strcspn(carta->cidade, "\n")] = '\0';
     printf("População: ");
@@ -64,7 +65,7 @@ void calcularPIBperCapita(struct Carta *carta) {
 void calcularsuper (struct Carta *carta) {
     carta->superpoder = 
     (carta->populacao / 1000) + 
-    (carta->pontosTuristicos) * 10 + 
+    (carta->pontosTuristicos * 10) + 
     (carta->area * 0.1) + 
     (carta->pib * 1e3) + 
     (carta->densidadePopulacional * 5) + 
@@ -88,7 +89,6 @@ int compararFloatInverso(float valor1, float valor2) {
 //Função para definir os vencedores
 void definirVencedores(struct Carta carta1, struct Carta carta2) {
     printf("Resultado das comparações:\n");
-
     printf("População: Carta %d venceu\n", compararInt(carta1.populacao, carta2.populacao));
     printf("Área: Carta %d venceu\n", compararFloat(carta1.area, carta2.area));
     printf("PIB: Carta %d venceu\n", compararFloat(carta1.pib, carta2.pib));
