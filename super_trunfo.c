@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 //Definindo as propriedades das cartas
 struct Carta {
@@ -22,9 +23,7 @@ void lerCarta(struct Carta *carta, int numeroCarta) {
     printf("Código da Carta (ex: A01): ");
     scanf("%s", carta->codigo);
     printf("Nome da Cidade: ");
-    getchar();
-    fgets(carta->cidade, sizeof(carta->cidade), stdin);
-    carta->cidade[strcspn(carta->cidade, "\n")] = '\0';
+    scanf(" %[^\n]", carta->cidade);
     printf("População: ");
     scanf("%d", &carta->populacao);
     printf("Área (em km²): ");
@@ -58,18 +57,21 @@ void calcularDensidade(struct Carta *carta) {
 
 //Função que calcula o PIB per capita das cartas
 void calcularPIBperCapita(struct Carta *carta) {
+    if (carta->populacao > 0) {
     carta->PIBperCapita = (carta->pib * 1e9) / carta->populacao;
+} else {
+    carta->PIBperCapita = 0;  // Para evitar erros
+}
 }
 
 //Função que calcula o superpoder das cartas
-void calcularsuper (struct Carta *carta) {
-    carta->superpoder = 
-    (carta->populacao / 1000) + 
-    (carta->pontosTuristicos * 10) + 
-    (carta->area * 0.1) + 
-    (carta->pib * 1e3) + 
-    (carta->densidadePopulacional * 5) + 
-    (carta->PIBperCapita * 0.001);
+void calcularSuper(struct Carta *carta) {
+    carta->superpoder = (carta->populacao / 1000) +
+                        (carta->pontosTuristicos * 10) +
+                        (carta->area * 0.1) +
+                        (carta->pib * 1e3) +
+                        (carta->densidadePopulacional * 5) +
+                        (carta->PIBperCapita * 0.001);
 }
 
 //Função que compara dois valores inteiros
@@ -89,13 +91,29 @@ int compararFloatInverso(float valor1, float valor2) {
 //Função para definir os vencedores
 void definirVencedores(struct Carta carta1, struct Carta carta2) {
     printf("Resultado das comparações:\n");
-    printf("População: Carta %d venceu\n", compararInt(carta1.populacao, carta2.populacao));
-    printf("Área: Carta %d venceu\n", compararFloat(carta1.area, carta2.area));
-    printf("PIB: Carta %d venceu\n", compararFloat(carta1.pib, carta2.pib));
-    printf("Pontos Turísticos: Carta %d venceu\n", compararInt(carta1.pontosTuristicos, carta2.pontosTuristicos));
-    printf("Densidade Populacional: Carta %d venceu\n", compararFloatInverso(carta1.densidadePopulacional, carta2.densidadePopulacional));
-    printf("PIB per Capita: Carta %d venceu\n", compararFloat(carta1.PIBperCapita, carta2.PIBperCapita));
-    printf("Superpoder: Carta %d venceu\n", compararFloat(carta1.superpoder, carta2.superpoder));
+// testando algumas alterações no código
+    int resultado;
+    
+    resultado = compararInt(carta1.populacao, carta2.populacao);
+    printf("População: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
+    
+    resultado = compararFloat(carta1.area, carta2.area);
+    printf("Área: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
+    
+    resultado = compararFloat(carta1.pib, carta2.pib);
+    printf("PIB: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
+
+    resultado = compararInt(carta1.pontosTuristicos, carta2.pontosTuristicos);
+    printf("Pontos Turísticos: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
+
+    resultado = compararFloatInverso(carta1.densidadePopulacional, carta2.densidadePopulacional);
+    printf("Densidade Populacional: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
+
+    resultado = compararFloat(carta1.PIBperCapita, carta2.PIBperCapita);
+    printf("PIB per Capita: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
+
+    resultado = compararFloat(carta1.superpoder, carta2.superpoder);
+    printf("Superpoder: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
 }
 
 //Função principal
@@ -115,8 +133,8 @@ int main() {
     calcularPIBperCapita(&carta2);
     
     // Chama a função para calcular o superpoder
-    calcularsuper(&carta1);
-    calcularsuper(&carta2);
+    calcularSuper(&carta1);
+    calcularSuper(&carta2);
     
     // Imprime o texto e chama a função para exibir as informações
     printf("Cartas cadastradas:\n");

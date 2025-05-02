@@ -1,5 +1,7 @@
 Desafio super trunfo.
 
+Tema 1: Fundamentos e Técnicas Avançadas
+
 1º Desafio
 
 Criar um programa em C que permita ao usuário inserir os dados de duas cartas do Super Trunfo. Para cada carta, o usuário deverá fornecer as seguintes informações:
@@ -18,13 +20,11 @@ PIB: O Produto Interno Bruto da cidade. Tipo: float
  
 Número de Pontos Turísticos: A quantidade de pontos turísticos na cidade. Tipo: int
  
-
 Após o usuário inserir os dados de cada carta, seu programa deve exibir na tela as informações cadastradas, de forma organizada e legível. Para cada carta, imprima cada informação em uma linha separada, com uma descrição clara.
 
 2º Desafio
 
 O programa continuará lendo as mesmas informações do usuário (estado, código da carta, nome da cidade, população, área, PIB e número de pontos turísticos) para duas cartas. A diferença é que, agora, o programa também deve:
-
 
 1. Calcular a Densidade Populacional: Divida a população da cidade pela sua área. O resultado será a densidade populacional, que representa o número de habitantes por quilômetro quadrado. Armazene esse valor em uma variável do tipo float.
  
@@ -37,3 +37,7 @@ O programa continuará lendo as mesmas informações do usuário (estado, códig
 Comparar as duas cartas atributo por atributo (exceto estado, código e nome), incluindo o Super Poder. para a densidade populacional, a carta com o menor valor vence; para os demais atributos (incluindo Super Poder), a carta com o maior valor vence.
  
 Para cada atributo, imprima na tela qual carta venceu (Carta 1 ou Carta 2), exibindo o resultado da comparação (1 para verdadeiro – Carta 1 vence – e 0 para falso – Carta 2 vence).
+
+Tema 2:Desenvolvendo a Lógica do Jogo
+
+1º Desafio
