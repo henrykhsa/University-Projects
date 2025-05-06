@@ -120,7 +120,7 @@ void definirVencedores(struct Carta carta1, struct Carta carta2) {
 int main() {
     struct Carta carta1, carta2;
 
-    // Chama a função para ler os dados
+    //Chama a função para ler os dados
     lerCarta(&carta1, 1);
     lerCarta(&carta2, 2);
 
