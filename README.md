@@ -63,10 +63,6 @@ Melhorias futuras podem incluir:
 
 ## 📊 Estatísticas do GitHub
 
-## 📊 Estatísticas do GitHub
-
-![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=henrykhsa&show_icons=true&theme=tokyonight&count_private=true) &nbsp; &nbsp; 
-![Linguagens Mais Usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=henrykhsa&layout=compact&langs_count=7&theme=tokyonight)
-
-
+![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=henrykhsa&show_icons=true&theme=tokyonight&count_private=true&height=180) &nbsp; &nbsp; 
+![Linguagens Mais Usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=henrykhsa&layout=compact&langs_count=7&theme=tokyonight&height=180)
 ---
