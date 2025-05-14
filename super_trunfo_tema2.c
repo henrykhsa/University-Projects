@@ -24,7 +24,7 @@ void lerCarta(struct Carta *carta, int numeroCarta) {
     printf("Código da Carta (ex: A01): ");
     scanf("%s", carta->codigo);
     printf("Nome da Cidade: ");
-    scanf(" %[^\n]", carta->cidade);
+    scanf(" %[^\n]%*c", carta->cidade);
     printf("População: ");
     scanf("%d", &carta->populacao);
     printf("Área (em km²): ");
@@ -48,6 +48,8 @@ void exibirCarta(struct Carta carta, int numeroCarta) {
     printf("Número de Pontos Turísticos: %d\n", carta.pontosTuristicos);
     printf("Densidade Populacional: %.2f por km²\n", carta.densidadePopulacional);
     printf("PIB per Capita: %.2f reais\n\n", carta.PIBperCapita);
+    printf("Superpoder: %.2f\n", carta.superpoder);
+    printf("\n");
 }
 
 //Função que calcula a densidade populacional
@@ -112,6 +114,7 @@ int main() {
     case 1:
         printf("Comparando a população\n");
         printf("População carta 1: %d\n" , carta1.populacao);
+        printf("População carta 2: %d\n\n" , carta2.populacao);
 
         if (carta1.populacao > carta2.populacao) {    
             printf("A carta %s venceu!\n", carta1.codigo);
@@ -123,8 +126,8 @@ int main() {
         break;
     case 2:
         printf("Comparando a area\n");
-        printf("Area carta 1: \n" , carta1.area);
-        printf("Area carta 2: \n\n" , carta2.area);
+        printf("Area carta 1: %.2f\n" , carta1.area);
+        printf("Area carta 2: %.2f\n\n" , carta2.area);
 
         if (carta1.area > carta2.area) {    
             printf("A carta %s venceu!\n", carta1.codigo);
@@ -136,8 +139,8 @@ int main() {
         break;
     case 3:
         printf("Comparando o PIB\n");
-        printf("PIB carta 1: \n" , carta1.pib);
-        printf("PIB carta 2: \n\n" , carta2.pib);
+        printf("PIB carta 1: %.2f\n" , carta1.pib);
+        printf("PIB carta 2: %.2f\n\n" , carta2.pib);
 
         if (carta1.pib > carta2.pib) {    
             printf("A carta %s venceu!\n", carta1.codigo);
@@ -149,8 +152,8 @@ int main() {
         break;
     case 4:
         printf("Comparando os pontos turisticos\n");
-        printf("Pontos turisticos carta 1: \n" , carta1.pontosTuristicos);
-        printf("Pontos turisticos carta 2: \n\n" , carta2.pontosTuristicos);
+        printf("Pontos turisticos carta 1: %d\n" , carta1.pontosTuristicos);
+        printf("Pontos turisticos carta 2: %d\n\n" , carta2.pontosTuristicos);
 
         if (carta1.pontosTuristicos > carta2.pontosTuristicos) {    
             printf("A carta %s venceu!\n", carta1.codigo);
@@ -162,8 +165,8 @@ int main() {
         break;
     case 5:
         printf("Comparando a densidade populacional\n");
-        printf("Densidade populacional carta 1: \n" , carta1.densidadePopulacional);
-        printf("Densidade populacional carta 2: \n\n" , carta2.densidadePopulacional);
+        printf("Densidade populacional carta 1: %.2f\n" , carta1.densidadePopulacional);
+        printf("Densidade populacional carta 2: %.2f\n\n" , carta2.densidadePopulacional);
 
         if (carta1.densidadePopulacional > carta2.densidadePopulacional) {    
             printf("A carta %s venceu!\n", carta1.codigo);
@@ -175,8 +178,8 @@ int main() {
         break;
     case 6:
         printf("Comparando o PIB per capita\n");
-        printf("PIB per capita carta 1: \n" , carta1.PIBperCapita);
-        printf("PIB per capita carta 2: \n\n" , carta2.PIBperCapita);
+        printf("PIB per capita carta 1: %.2f\n" , carta1.PIBperCapita);
+        printf("PIB per capita carta 2: %.2f\n\n" , carta2.PIBperCapita);
 
         if (carta1.PIBperCapita > carta2.PIBperCapita) {    
             printf("A carta %s venceu!\n", carta1.codigo);
@@ -188,8 +191,8 @@ int main() {
         break;
     case 7:
         printf("Comparando o superpoder\n");
-        printf("Superpoder carta 1: \n" , carta1.superpoder);
-        printf("Superpoder carta 2: \n\n" , carta2.superpoder);
+        printf("Superpoder carta 1: %.2f\n" , carta1.superpoder);
+        printf("Superpoder carta 2: %.2f\n\n" , carta2.superpoder);
 
         if (carta1.superpoder > carta2.superpoder) {    
             printf("A carta %s venceu!\n", carta1.codigo);
