@@ -168,9 +168,9 @@ int main() {
         printf("Densidade populacional carta 1: %.2f\n" , carta1.densidadePopulacional);
         printf("Densidade populacional carta 2: %.2f\n\n" , carta2.densidadePopulacional);
 
-        if (carta1.densidadePopulacional > carta2.densidadePopulacional) {    
+        if (carta1.densidadePopulacional < carta2.densidadePopulacional) {    
             printf("A carta %s venceu!\n", carta1.codigo);
-        } else if (carta1.densidadePopulacional < carta2.densidadePopulacional) {
+        } else if (carta1.densidadePopulacional > carta2.densidadePopulacional) {
             printf("A carta %s venceu!\n", carta2.codigo);
         } else {
             printf("Empate!\n");
@@ -194,13 +194,13 @@ int main() {
         printf("Superpoder carta 1: %.2f\n" , carta1.superpoder);
         printf("Superpoder carta 2: %.2f\n\n" , carta2.superpoder);
 
-        //if (carta1.superpoder > carta2.superpoder) {    
-        //    printf("A carta %s venceu!\n", carta1.codigo);
-        //} else if (carta1.superpoder < carta2.superpoder) {
-        //    printf("A carta %s venceu!\n", carta2.codigo);
-        //} else {
-        //    printf("Empate!\n");
-        //}
+        if (carta1.superpoder > carta2.superpoder) {    
+            printf("A carta %s venceu!\n", carta1.codigo);
+        } else if (carta1.superpoder < carta2.superpoder) {
+            printf("A carta %s venceu!\n", carta2.codigo);
+        } else {
+            printf("Empate!\n");
+        }
         break;
     default:
         printf("Opção inválida!\n");
