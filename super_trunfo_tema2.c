@@ -166,10 +166,10 @@ int main() {
 
         resultado1 = carta1.superpoder > carta2.superpoder ? 1 : 0;
         break;
-        
+
     // Adicionei o case default para lidar com entradas inválidas
     default:
-        printf("Opção inválida!\n");
+        printf("\nOpção inválida!\n");
         printf("Selecione uma opção válida de comparação.\n");
         break;
     }
@@ -241,18 +241,19 @@ int main() {
         // Adicionei o case default para lidar com entradas inválidas
         
         default:
-            printf("Opção inválida!\n");
+            printf("\nOpção inválida!\n");
+            printf("Selecione uma opção válida de comparação.\n");
             break;
         }
     }
 
     // Exibe o resultado da comparação
         if (resultado1 && resultado2) {
-        printf("A carta 1 venceu!\n");
+        printf("\nA carta 1 venceu!\n");
     } else if (resultado1 != resultado2) {
-        printf("Empate!\n");
+        printf("\nEmpate!\n");
     } else {
-        printf("A carta 2 venceu!\n");
+        printf("\nA carta 2 venceu!\n");
     }
 
     printf("\n\nObrigado por jogar!\n");
