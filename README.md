@@ -79,7 +79,34 @@ Este projeto consiste em simular um jogo de **Super Trunfo** com cartas represen
     - Qual carta venceu ou se houve empate
 
 #### 🔴 3º Desafio
-  - (em desenvolvimento!)
+  - Integrar conhecimentos de estruturas de decisão em C para:
+    - Comparar cartas com dois atributos numéricos.
+    - Usar menus dinâmicos com switch.
+    - Aplicar o operador ternário para otimizar o código.
+
+  - Escolha de Dois Atributos
+    - Jogador deve escolher dois atributos diferentes para comparar.
+    - Menus interativos devem garantir que o mesmo atributo não seja escolhido duas vezes.
+  - Comparação com Múltiplos Atributos
+    - Comparar as cartas com base nos dois atributos escolhidos.
+    - Regra geral: Vence quem tiver maior valor.
+    - Exceção: Em Densidade Demográfica, vence quem tiver menor valor.
+  - Soma dos Atributos
+    - Somar os dois atributos de cada carta.
+    - A maior soma define o vencedor da rodada.
+  - Tratamento de Empates
+    - Se as somas forem iguais, exibir: "Empate!".
+  - Menus Dinâmicos com switch
+    - O menu do segundo atributo deve excluir o primeiro atributo escolhido.
+    - Usar switch para estruturar as escolhas de forma clara e organizada.
+  - Exibição Clara do Resultado
+    - Mostrar:
+    - Nome dos dois países.
+    - Os dois atributos escolhidos.
+    - Os valores dos atributos de cada carta.
+    - A soma final dos atributos.
+    - O vencedor ou se houve empate.
+
 ---
 
 ## 🧠 Tecnologias Utilizadas

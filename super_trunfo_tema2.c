@@ -108,18 +108,18 @@ int main() {
     int segundoAtributo = 0;
     int resultado1 = 0;
     int resultado2 = 0;
-
+    // Solicita ao usuário que escolha os atributos para comparação
     printf("Selecione a primeira opções de comparação:\n");
     printf("\n 1.População\n 2.Área\n 3.PIB\n 4.Pontos Turísticos\n 5.Densidade Populacional\n 6.PIB per Capita\n 7.Superpoder\n\n");
-
+    // Adicionei o espaço antes de %c para evitar problemas com o buffer de entrada
     scanf("%d", &primeiroAtributo);
-
+    
     switch (primeiroAtributo) {
     case 1:
         printf("\nComparando a população\n");
         printf("População carta 1: %d\n" , carta1.populacao);
         printf("População carta 2: %d\n\n" , carta2.populacao);
-
+        
         resultado1 = carta1.populacao > carta2.populacao ? 1 : 0;
         break;
     case 2:
@@ -173,12 +173,13 @@ int main() {
         printf("Selecione uma opção válida de comparação.\n");
         break;
     }
-
+    // Solicita ao usuário que escolha o segundo atributo para comparação
     printf("Escolha a segunda opção de comparação:\n");
     printf("\n 1.População\n 2.Area\n 3.PIB\n 4.Pontos Turisticos\n 5.Densidade Populacional\n 6.PIB per Capita\n 7.Superpoder\n");
-
+    // Adicionei o espaço antes de %c para evitar problemas com o buffer de entrada
     scanf("%d", &segundoAtributo);
-
+    // Verifica se o usuário escolheu o mesmo atributo para comparação
+    // Se o usuário escolher o mesmo atributo, exibe uma mensagem de erro e encerra o programa
     if (primeiroAtributo == segundoAtributo) {
         printf("\nVocê não pode escolher o mesmo atributo para comparação!\n");
         printf("Escolha um atributo diferente para comparação.\n");
@@ -239,7 +240,6 @@ int main() {
             break;
         
         // Adicionei o case default para lidar com entradas inválidas
-        
         default:
             printf("\nOpção inválida!\n");
             printf("Selecione uma opção válida de comparação.\n");
@@ -255,7 +255,7 @@ int main() {
     } else {
         printf("\nA carta 2 venceu!\n");
     }
-
+    // Exibe uma mensagem de agradecimento ao usuário
     printf("\n\nObrigado por jogar!\n");
     return 0;
 }

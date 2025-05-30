@@ -94,24 +94,25 @@ void definirVencedores(struct Carta carta1, struct Carta carta2) {
 // testando algumas alterações no código
     int resultado;
     
+    // Compara a população
     resultado = compararInt(carta1.populacao, carta2.populacao);
     printf("População: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
-    
+    // Compara a área
     resultado = compararFloat(carta1.area, carta2.area);
     printf("Área: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
-    
+    // Compara o PIB
     resultado = compararFloat(carta1.pib, carta2.pib);
     printf("PIB: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
-
+    // Compara os pontos turísticos
     resultado = compararInt(carta1.pontosTuristicos, carta2.pontosTuristicos);
     printf("Pontos Turísticos: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
-
+    // Compara a densidade populacional, usando comparação inversa
     resultado = compararFloatInverso(carta1.densidadePopulacional, carta2.densidadePopulacional);
     printf("Densidade Populacional: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
-
+    // Compara o PIB per capita
     resultado = compararFloat(carta1.PIBperCapita, carta2.PIBperCapita);
     printf("PIB per Capita: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
-
+    // Compara o superpoder
     resultado = compararFloat(carta1.superpoder, carta2.superpoder);
     printf("Superpoder: %s\n", resultado == 1 ? "Carta 1 venceu" : resultado == 2 ? "Carta 2 venceu" : "Empate");
 }
