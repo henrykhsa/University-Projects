@@ -15,7 +15,8 @@ int main() {
         {0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0}
     };
-
+    // 0 representa água, 3 representa um navio
+    // Imprime uma mensagem de boas-vindas
     printf("\nTabuleiro inicial:\n\n");
     // Imprime o cabeçalho do tabuleiro
     printf("  x A B C D E F G H I J\n");
