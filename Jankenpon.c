@@ -5,7 +5,7 @@
 int main() {
     int escolhaJogador, escolhaComputador;
     srand(time(0)); // Inicializa o gerador de números aleatórios
-
+    // Instruções do jogo
     printf("Jogo de Jankenpon (Pedra, Papel e Tesoura)\n\n");
     printf("Escolha uma opção:\n");
     printf("1. Pedra\n");
@@ -13,7 +13,7 @@ int main() {
     printf("3. Tesoura\n");
     printf("Digite sua escolha (1-3): ");
     scanf("%d", &escolhaJogador);
-
+    // Verifica se a escolha do jogador é válida
     escolhaComputador = rand() % 3 + 1; // Gera uma escolha aleatória para o computador
 
     switch (escolhaJogador) {
@@ -30,7 +30,7 @@ int main() {
             printf("Escolha inválida!\n\n");
             break;
     }
-
+    // Exibe a escolha do computador
     switch (escolhaComputador) {
         case 1:
             printf("O computador escolheu Pedra.\n\n");
@@ -44,7 +44,7 @@ int main() {
     }
 
     // Verifica o resultado
-
+    
     if (escolhaJogador == escolhaComputador) {
         printf("Empate!\n");
     } else if ((escolhaJogador == 1 && escolhaComputador == 3) ||
