@@ -1,131 +1,38 @@
-# Jogo_Batalha_Naval
-
-# University-Projects
-
-# Jankenpon
-
-# Xadrez
-
-<h1 align="center">🃏 Desafio Super Trunfo</h1>
+<h1 align="center">📚 University Projects</h1>
 
 <p align="center">
-  <b>Tema 1: Fundamentos e Técnicas Avançadas em linguagem C</b><br/>
-  1º, 2º e 3º Desafio - Programação Estruturada 💻
-</p>
-
----
-<p align="center">
-  <b>Tema 2: Desenvolvendo a Lógica do Jogo</b><br/>
-  1º, 2º e 3º Desafio - Modelagem de dados e escolhas do usuário 💻
+  Uma coleção de projetos acadêmicos desenvolvidos ao longo da minha jornada universitária. Este repositório demonstra minha aplicação prática de conceitos de programação, estruturas de dados, algoritmos e diferentes paradigmas.
 </p>
 
 ---
 
-## 👨‍💻 Sobre o Projeto
-
-Este projeto consiste em simular um jogo de **Super Trunfo** com cartas representando cidades de diferentes estados brasileiros. Foi desenvolvido em **C** como parte de um desafio acadêmico com foco em manipulação de dados, cálculos e comparações entre estruturas.
-
----
-
-### 📋 Funcionalidades do Tema 1
-
-#### 🟢 1º Desafio
-- Inserção de dados de duas cartas:
-  - Estado (A–H)
-  - Código da Carta (ex: A01, B03)
-  - Nome da Cidade
-  - População
-  - Área (km²)
-  - PIB
-  - Pontos Turísticos
-- Exibição organizada das informações.
-
-#### 🟡 2º Desafio
-- Cálculo automático:
-  - 🧮 Densidade Populacional = População / Área
-  - 💰 PIB per Capita = PIB / População
-- Formatação com duas casas decimais.
-- Exibição completa com dados e cálculos.
-
-#### 🔴 3º Desafio
-- Comparação entre as cartas:
-  - Densidade Populacional (menor valor vence)
-  - Demais atributos (maior valor vence)
-- Resultado exibido com 1 (vitória da Carta 1) ou 0 (vitória da Carta 2)
+<p align="center">
+  A collection of academic projects developed throughout my university journey. This repository demonstrates my practical application of programming concepts, data structures, algorithms, and different paradigms.
+</p>
 
 ---
 
-### 📋 Funcionalidades do Tema 2
+### **Projetos Inclusos**
 
-#### 🟢 1º Desafio
-- Comparar um único atributo numérico (escolhido diretamente no código):
-  - População
-  - Área
-  - PIB
-  - Densidade populacional
-  - PIB per capita
-- Determinar o vencedor:
-  - Quem tiver maior valor vence, exceto na densidade populacional (onde menor valor vence).
-- Exibir o resultado da comparação de forma clara, com os valores de cada carta e qual venceu.
-
-#### 🟡 2º Desafio
-  - Usar cartas já cadastradas (não precisa cadastrar novamente).
-  - Criar um menu no terminal com switch para o jogador escolher qual atributo comparar:
-    - População
-    - Área
-    - PIB
-    - Número de pontos turísticos
-    - Densidade demográfica
-    - (Nome do país é apenas informativo, não entra na comparação)
-  - Comparar duas cartas com base no atributo escolhido:
-    - Maior valor vence (regra padrão)
-    - Exceto na Densidade demográfica, onde menor valor vence 
-  - Exibir o resultado da comparação, mostrando:
-    - Nome dos dois países
-    - Atributo comparado
-    - Valores de cada carta
-    - Qual carta venceu ou se houve empate
-
-#### 🔴 3º Desafio
-  - Integrar conhecimentos de estruturas de decisão em C para:
-    - Comparar cartas com dois atributos numéricos.
-    - Usar menus dinâmicos com switch.
-    - Aplicar o operador ternário para otimizar o código.
-
-  - Escolha de Dois Atributos
-    - Jogador deve escolher dois atributos diferentes para comparar.
-    - Menus interativos devem garantir que o mesmo atributo não seja escolhido duas vezes.
-  - Comparação com Múltiplos Atributos
-    - Comparar as cartas com base nos dois atributos escolhidos.
-    - Regra geral: Vence quem tiver maior valor.
-    - Exceção: Em Densidade Demográfica, vence quem tiver menor valor.
-  - Soma dos Atributos
-    - Somar os dois atributos de cada carta.
-    - A maior soma define o vencedor da rodada.
-  - Tratamento de Empates
-    - Se as somas forem iguais, exibir: "Empate!".
-  - Menus Dinâmicos com switch
-    - O menu do segundo atributo deve excluir o primeiro atributo escolhido.
-    - Usar switch para estruturar as escolhas de forma clara e organizada.
-  - Exibição Clara do Resultado
-    - Mostrar:
-    - Nome dos dois países.
-    - Os dois atributos escolhidos.
-    - Os valores dos atributos de cada carta.
-    - A soma final dos atributos.
-    - O vencedor ou se houve empate.
+* **[Batalha Naval](Batalha-Naval/)**: Um jogo de tabuleiro para console que explora o uso de matrizes e lógica de jogo.
+* **[Super Trunfo](Super-Trunfo/)**: Uma simulação de jogo de cartas que demonstra manipulação de dados e regras complexas.
+* **[Jankenpon](Jankenpon/)**: Um jogo simples para praticar fundamentos de programação, como estruturas de controle e números aleatórios.
+* **[Algoritmos em C++](algoritimos-Cpp/)**: Uma coleção de exemplos de código que demonstra o uso de classes e algoritmos em C++.
+* **[Conceitos de POO em Java](java-oop/)**: Exemplos de código que ilustram os princípios de Orientação a Objetos, como herança e polimorfismo, na linguagem Java.
+* **[Xadrez](Xadrez/)**: Uma implementação do clássico jogo de xadrez, focando em algoritmos de movimento e lógica de tabuleiro.
 
 ---
 
-## 🧠 Tecnologias Utilizadas
+### **Tecnologias Utilizadas**
 
-- Linguagem **C**
-- Conceitos de **estrutura de dados**, **entradas formatadas**, **cálculo de métricas** e **comparação lógica**
+Este repositório inclui projetos desenvolvidos nas seguintes linguagens e tecnologias:
 
+* **C**
+* **Java**
+* **C++**
 
+---
 
-## 🚀 Em desenvolvimento...
+### **Autor**
 
-Melhorias futuras podem incluir:
-- Entrada via arquivos
-- Modo multiplayer 🧑‍🤝‍🧑
+**Henrykhsa** - [[LinkedIn](https://www.linkedin.com/in/henrykhsa/)]
